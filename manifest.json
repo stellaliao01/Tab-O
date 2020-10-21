@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Tab O",
+    "version": "1.0",
+    "background": {
+        "page": "tabs.html",
+        "persistant": true
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "description": "organize your tabs",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "./main.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Tab Organizer",
+        "default_popup": "tabs.html"
+    },
+    "options_ui": {
+        "page": "tabs.html",
+        "open_in_tab": false
+    }
+}
